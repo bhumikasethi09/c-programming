@@ -16,8 +16,19 @@ int printTriangle(int size) {
 
   //when you finish counting on i, 
 
-  //your answer is starCount
-
+  //your answer is starCoun
+    int i,j,starCount;
+    starCount=0;
+    for(i=0;i<size+1;i++)
+      {
+	for(j=0;j<i;j++)
+	  {
+	    printf("*");
+	    starCount=starCount+1;
+	  }
+	printf("\n");
+      }
+    return starCount;
 }
 
 
@@ -32,7 +43,9 @@ int main(void) {
 
   //finally, print "That triangle had %d total stars\n", such that the %d 
   //prints the value of numStars
-
+  printf("Here is a triangle with height 7\n");
+  numStars=printTriangle(7);
+  printf("That triangle had %d total stars\n",numStars);
 
   return 0;
 }
